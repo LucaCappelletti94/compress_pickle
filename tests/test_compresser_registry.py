@@ -72,7 +72,9 @@ def test_validate_compression(compressions_to_validate):
     if expected_fail:
         with pytest.raises(
             ValueError,
-            match=re.escape(f"Unknown compression {compression!r}. Available values are"),
+            match=re.escape(
+                f"Unknown compression {compression!r}. Available values are"
+            ),
         ):
             validate_compression(compression, infer_is_valid=infer_is_valid)
     else:

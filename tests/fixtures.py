@@ -39,7 +39,7 @@ FILENAMES = [
         ["test_blabla_{}"],
         [e[0] for e in VALID_EXTENSIONS] + INVALID_EXTENSIONS,
         [str, lambda x: bytes(x, "utf-8"), pathlib.Path],
-        )
+    )
 ]
 UNHANDLED_EXTENSIONS = ["ignore", "warn", "raise"]
 FILE_COMPRESSIONS = COMPRESSION_NAMES + ["infer"]
@@ -57,7 +57,7 @@ def random_message():
         + "a big redundancy string to ensure a smaller compressed size: "
         + "a" * 50
         + "".join(random.choices(string.printable, k=12))
-        )
+    )
     return message
 
 
@@ -131,7 +131,7 @@ def compressions_to_validate(request):
     params=zip(
         itertools.product(PICKLER_NAMES, [True]),
         itertools.product(UNHANDLED_PICKLERS, [False]),
-        ),
+    ),
     ids=str,
 )
 def picklers_to_validate(request):
@@ -217,7 +217,7 @@ def dump_load(file, random_message, file_compressions, set_default_extension):
         set_default_extension,
         expected_file,
         expected_fail,
-        )
+    )
     if expected_file is not None:
         print(file, file_compressions, set_default_extension, expected_file)
         os.remove(expected_file)

@@ -46,7 +46,7 @@ def test_pickle_dump_protocol_5(compressions):
 
 @pytest.mark.usefixtures("compressions")
 def test_json_dump_protocol(compressions):
-    obj = {'test_data': list(range(100)), 'fish': False, 'null': None}
+    obj = {"test_data": list(range(100)), "fish": False, "null": None}
     out = loads(
         dumps(
             obj=obj,

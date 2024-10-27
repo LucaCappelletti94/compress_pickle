@@ -4,7 +4,7 @@ from .base import BasePicklerIO
 from .registry import register_pickler
 
 try:
-    import cloudpickle
+    import cloudpickle  # type: ignore
 
     _cloudpickle_available = True
 except ImportError:  # pragma: no cover

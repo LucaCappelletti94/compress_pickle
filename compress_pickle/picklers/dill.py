@@ -4,7 +4,7 @@ from .base import BasePicklerIO
 from .registry import register_pickler
 
 try:
-    import dill
+    import dill  # type: ignore
 
     _dill_available = True
 except ImportError:  # pragma: no cover

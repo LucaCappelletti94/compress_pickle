@@ -263,9 +263,9 @@ class _compresser_registry:
                 )
             )
         cls._compresser_registry[alias] = cls._compresser_registry[compression]
-        cls._compresser_default_write_modes[
-            alias
-        ] = cls._compresser_default_write_modes[compression]
+        cls._compresser_default_write_modes[alias] = (
+            cls._compresser_default_write_modes[compression]
+        )
         cls._compresser_default_read_modes[alias] = cls._compresser_default_read_modes[
             compression
         ]

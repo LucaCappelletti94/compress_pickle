@@ -5,7 +5,7 @@ from .base import PATH_TYPES, BaseCompresser, PathType
 from .registry import register_compresser
 
 try:
-    import lz4.frame
+    import lz4.frame  # type: ignore
 
     _lz4_available = True
 except ImportError:  # pragma: no cover
